@@ -28,5 +28,19 @@ echo "<br/>";
 $aluno = new Usuario("joão", "123456");
 $aluno->insert();
 echo $aluno;
+echo "<br/>";
+
+//altera um usuário
+$usuario = new Usuario();
+$usuario->loadById(1);
+$usuario->update("professor", "123456789");
+echo "<br/>";
+
+//deleta um usuário
+$usuario = new Usuario();
+$usuario->loadById(2);
+$usuario->delete();
+echo $usuario;
+echo "<br/>";
 
 ?>
